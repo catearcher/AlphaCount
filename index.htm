@@ -1,0 +1,18 @@
+<meta charset='utf-8'>
+
+<script>
+for (
+  o = {}, m = "", s = prompt().match(/[a-z]/gi);
+  x = s.pop();
+  o[x] ? o[x]++ : o[x] = 1
+);
+
+Object.keys(o).sort(function(a,b) {
+  return o[a] - o[b];
+}).forEach(function(x) {
+  m += x + o[x];
+});
+
+alert(m);
+
+</script>
