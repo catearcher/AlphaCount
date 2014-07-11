@@ -4,7 +4,7 @@
 for (
   o = {}, m = "", s = prompt().toLowerCase().match(/[a-z]/g);
   x = s.pop();
-  o[x]++ || (o[x] = 1)
+  o[x] = ++o[x] || 1
 );
 
 Object.keys(o).sort(function(a, b) {
